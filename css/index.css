@@ -36,8 +36,8 @@ header .showTime {
 }
 .mainbox {
   display: flex;
-  min-width: 1024px;
-  max-width: 1920px;
+  min-width: 12.8rem;
+  max-width: 24rem;
   margin: 0 auto;
   padding: 0.125rem 0.125rem 0;
 }
@@ -112,7 +112,6 @@ header .showTime {
 }
 .mainbox .panel .chart {
   height: 3rem;
-  background-color: pink;
 }
 .no {
   background: rgba(101, 132, 226, 0.1);
@@ -178,7 +177,6 @@ header .showTime {
 .map {
   height: 10.125rem;
   position: relative;
-  background-color: pink;
 }
 .map .map1 {
   width: 6.475rem;
@@ -190,4 +188,49 @@ header .showTime {
   background: url(../images/map.png);
   background-size: 100% 100%;
   opacity: 0.3;
+}
+.map .map2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8.0375rem;
+  height: 8.0375rem;
+  background: url(../images/lbx.png);
+  background-size: 100%;
+  animation: rotate1 15s linear infinite;
+  opacity: 0.6;
+}
+@keyframes rotate1 {
+  form {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.map .map3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.6;
+  transform: translate(-50%, -50%);
+  width: 7.075rem;
+  height: 7.075rem;
+  background: url(../images/jt.png);
+  background-size: 100%;
+  animation: rotate2 15s linear infinite;
+}
+@keyframes rotate2 {
+  form {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+.map .chart {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

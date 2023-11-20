@@ -41,8 +41,8 @@ header{
 .mainbox{
     display:flex;
 
-    min-width: 1024px;
-    max-width: 1920px;
+    min-width: 12.8rem;
+    max-width: 24rem;
     margin: 0 auto;
     padding: .125rem .125rem 0;
     
@@ -116,7 +116,7 @@ header{
         }
         .chart{
             height: 3rem;
-            background-color: pink;
+            
         }
     }
 }
@@ -187,7 +187,6 @@ header{
 .map{
     height: 10.125rem;
     position: relative;
-    background-color: pink;
     .map1{
         width: 6.475rem;
         height: 6.475rem;
@@ -198,5 +197,55 @@ header{
         background: url(../images/map.png);
         background-size: 100% 100%;
         opacity: .3;
+    }
+    .map2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 8.0375rem;
+        height: 8.0375rem;
+        background: url(../images/lbx.png);
+        background-size: 100%;
+        animation:rotate1 15s linear infinite;//动画属性：播放动画rotate1，时常15s 匀速 无限循环
+        opacity: .6;
+    }
+
+    @keyframes rotate1{//与animation合用定义了两个关键帧
+        form{
+            transform:translate(-50%,-50%) rotate(0deg);
+        }
+        to{
+            transform:translate(-50%,-50%) rotate(360deg); 
+        }
+    }
+
+    .map3{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: .6;
+        transform: translate(-50%,-50%);
+        width: 7.075rem;
+        height: 7.075rem;
+        background: url(../images/jt.png);
+        background-size: 100%;
+        animation: rotate2 15s linear infinite;
+    }
+
+    @keyframes rotate2{//与animation合用定义了两个关键帧
+        form{
+            transform:translate(-50%,-50%) rotate(0deg);
+        }
+        to{
+            transform:translate(-50%,-50%) rotate(-360deg); 
+        }
+    }
+
+    .chart{
+        position: absolute;
+        top: 0;
+        left: 0;
+
     }
 }
